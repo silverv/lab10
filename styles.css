@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  letter-spacing: 0.3pt;
+  font-family: "Roboto", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#name {
+  width: 100px;
+  height: 100%;
+  padding: 2px;
+  padding-left: 5px;
+}
+
+#accept {
+  height: 100%;
+  margin: 0;
+  padding: 2px;
+}
+
+#logout {
+  display: none;
+}
+
+#container {
+  margin-top: 5px;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: 50px auto;
+      grid-template-rows: 50px auto;
+      grid-template-areas: "header" "content";
+}
+
+#header {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  background-color: #efa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  padding: 20px;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: content;
+  background-color: #bea;
+}
+
+#enterName {
+  margin-left: 10px;
+  justify-self: flex-start;
+}
+
+#displayName {
+  display: none;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+#addButton {
+  height: 100%;
+}
+
+#productTable {
+  display: none;
+}
+
+#productTable tr.data:hover {
+  background-color: #fff;
+}
+
+#productName {
+  width: 300px;
+}
+
+#productQuantity {
+  width: 46px;
+}
+
+input {
+  height: 100%;
+  padding: 2px;
+  padding-left: 7px;
+}
+/*# sourceMappingURL=styles.css.map */

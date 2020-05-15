@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 10</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body id="container">
+    <div id="header">
+        <span id="enterName">
+            <span>Please enter your name here:</span>
+            <input type="text" name="name" id="name">
+            <button id="accept" id="accept">Continue</button>
+        </span>
+        <span id="logout">
+            <button id="btnLogout">Log out</button>
+        </span>
+        <div id="displayName">Person</div>
+    </div>
+    <div id="content">
+        <table id="productTable">
+            <tr>
+                <th>Id</th>
+                <th>Product</th>
+                <th>Quantity</th>
+            </tr>
+            <tr>
+                <td><button id="btnAdd">Add</button></td>
+                <td><input type="text" name="productName" id="productName"></td>
+                <td><input type="number" name="productQuantity" id="productQuantity"></td>
+            </tr>
+        </table>
+    </div>
+    <script src="lib/cookies.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
