@@ -94,6 +94,9 @@ class Application {
                         if (row === undefined || row.id === undefined) { throw "row is not accessible here" };
                         console.log(`row.id = ${row.id}`)
                         sl.removeRow(row.id);
+                        Application.clearShoppingList();
+                        Application.showShoppingList(sl);
+                        ShoppingLists.saveShoppingList(sl);
                     })
                 }
             }
