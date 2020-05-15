@@ -47,10 +47,13 @@ class ShoppingList {
         this.shoppingListCounter++;
     }
     removeRow(id) {
-        this.rows.filter(row => row.id !== id);
+        if (typeof (id) !== "number"){ throw "id is not a number"}
+        
+        this.rows = this.rows.filter(row => row.id !== id);
         this.shoppingListCounter--;
-        this.rows.map((row, index) => {
+        this.rows = this.rows.map((row, index) => {
             row.id = index;
+            console.log(Object.getOwnPropertyNames(row));
             return row;
         });
     }
@@ -84,9 +87,12 @@ class Application {
                     let btnRemoveText = document.createTextNode("Remove");
                     btnRemove.appendChild(btnRemoveText);
                     btnRemove.addEventListener("click", function () {
+                        console.log("remove button clicked");
+                        console.log(`name = ${Cookies.get("name")}`);
                         let sl = ShoppingLists.getShoppingList(Cookies.get('name'));
                         if (sl === undefined) { throw "Shopping list doesn't exist although it is displayed." }
                         if (row === undefined || row.id === undefined) { throw "row is not accessible here" };
+                        console.log(`row.id = ${row.id}`)
                         sl.removeRow(row.id);
                     })
                 }
